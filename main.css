@@ -1,0 +1,167 @@
+#boardCon {
+  float: left;
+  margin-right: 20px;
+}
+
+#playerInfoCon {
+  height: 911px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  width: 900px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+/*Hover info start*/
+#hoverInfoCon {
+  position: relative;
+}
+
+#hoverInfo {
+  position: absolute;
+  bottom: 1px;
+  left: 30px;
+  z-index: 2;
+  height: 210px;
+  width: 180px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+#infoColorBar {
+  text-align: center;
+  width: 180px;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+  border-bottom: 2px solid black;
+}
+
+#infoTitle {
+  font-size: 16px;
+}
+
+p.hoverInfo {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+/*Hover info end*/
+
+/*Turn display start*/
+.turnButton {
+  border: 2px solid black;
+  background-color: white;
+  font-size: 20px;
+  /*
+  width: 100px;
+  */
+  margin-top: 10px;
+}
+
+.turnButton:hover {
+  background-color: #efefef;
+}
+
+#rollButton {
+}
+
+#noButton {
+}
+
+#yesButton {
+}
+
+#yesNoCon {
+}
+
+#turnDisplayCon {
+  position: relative;
+}
+
+#turnDisplay {
+  position: absolute;
+  top: -50px;
+  border: 2px solid black;
+  height: 250px;
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*Turn display end*/
+
+/*Player piece display start*/
+.vertical, .corner, .horizontal {
+  position: relative;
+}
+
+.cornerPieceDisplay {
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  width: 60px;
+}
+
+.verticalPieceDisplay {
+  position: absolute;
+  left: 13px;
+  top: 25px;
+  width: 65px;
+  height: 60px;
+}
+
+.leftHorizontalPieceDisplay {
+  position: absolute;
+  top: 35px;
+  left: 1px;
+  width: 90px;
+  height: 60px;
+}
+
+.rightHorizontalPieceDisplay {
+  position: absolute;
+  top: 35px;
+  left: 24px;
+  width: 90px;
+  height: 60px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.p1dot {
+  background-color: red;
+}
+
+.p2dot {
+  background-color: royalblue;
+}
+
+.p3dot {
+  background-color: green;
+}
+
+.p4dot {
+  background-color: yellow;
+}
+/*Player piece display end*/
+
+.moneyDisplay {
+  color: black;
+}
+
+#testDisplay {
+  white-space: pre;
+}

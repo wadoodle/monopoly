@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='main.css' type='text/css'>
+    <link rel='stylesheet' href='board.css' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title>Monopoly</title>
+  </head>
+  <body>
+
+    <table id='boardCon'>
+      <tr>
+        <td class='corner'>
+          <div class='cornerPieceDisplay'>
+            <span class='p1dot dot' id='p1dot20' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot20' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot20' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot20' style='display: none'></span>
+          </div>
+          <h1 class='freeParking'>FREE PARKING</h1>
+        </td>
+
+        <td class='vertical' id='kentuckyAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot21' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot21' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot21' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot21' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>KENTUCKY AVENUE</h1>
+          <h2 class='topPropertyContent'>PRICE $220</h2>
+          <div class='topHorizontalColorBar red'>
+          </div>
+        </td>
+
+        <td class='vertical'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot22' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot22' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot22' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot22' style='display: none'></span>
+          </div>
+          <div class='chance'>
+            <h1 class='chance'>CHANCE</h1>
+            <h2 class='chance' id='chanceBlue'>?</h2>
+          </div>
+        </td>
+
+        <td class='vertical' id='indianaAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot23' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot23' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot23' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot23' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>INDIANA AVENUE</h1>
+          <h2 class='topPropertyContent'>PRICE $220</h2>
+          <div class='topHorizontalColorBar red'>
+          </div>
+        </td>
+
+        <td class='vertical' id='illinoisAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot24' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot24' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot24' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot24' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>ILLINOIS AVENUE</h1>
+          <h2 class='topPropertyContent'>PRICE $240</h2>
+          <div class='topHorizontalColorBar red'>
+          </div>
+        </td>
+
+        <td class='vertical' id='bandoRRHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot25' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot25' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot25' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot25' style='display: none'></span>
+          </div>
+          <h1 class='rr'>B&O Railroad</h1>
+          <h2 class='rr'>PRICE $200</h2>
+        </td>
+
+        <td class='vertical' id='atlanticAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot26' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot26' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot26' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot26' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>ATLANTIC AVENUE</h1>
+          <h2 class='topPropertyContent'>PRICE $260</h2>
+          <div class='topHorizontalColorBar yellow'>
+          </div>
+        </td>
+
+        <td class='vertical' id='ventourAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot27' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot27' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot27' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot27' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>VENTOUR AVENUE</h1>
+          <h2 class='topPropertyContent'>PRICE $260</h2>
+          <div class='topHorizontalColorBar yellow'>
+          </div>
+        </td>
+
+        <td class='vertical' id='waterWorksHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot28' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot28' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot28' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot28' style='display: none'></span>
+          </div>
+          <h1 class=utility>WATER WORKS<br><i class="fas fa-tint"></i></h1>
+          <h2 class=utility>PRICE $150</h2>
+        </td>
+
+        <td class='vertical' id='marvinGardensHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot29' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot29' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot29' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot29' style='display: none'></span>
+          </div>
+          <h1 class='topPropertyContent'>MARVIN GARDENS</h1>
+          <h2 class='topPropertyContent'>PRICE $280</h2>
+          <div class='topHorizontalColorBar yellow'>
+          </div>
+        </td>
+
+        <td class='corner'>
+          <div class='cornerPieceDisplay'>
+            <span class='p1dot dot' id='p1dot30' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot30' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot30' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot30' style='display: none'></span>
+          </div>
+          <h1 class='goToJail'>GO TO JAIL</h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='newYorkAveHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot19' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot19' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot19' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot19' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>NEW YORK AVENUE</h1>
+            <h2 class='leftPropertyContent'>PRICE $200</h2>
+          </div>
+          <div class='leftVerticalColorBar orange'>
+          </div>
+        </td>
+
+        <td colspan='9'></td>
+
+        <td class='horizontal' id='pacificAveHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot31' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot31' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot31' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot31' style='display: none'></span>
+          </div>
+          <div class='rightTextCon'>
+            <h1 class='rightPropertyContent'>PACIFIC AVENUE</h1>
+            <h2 class='rightPropertyContent'>PRICE $300</h2>
+          </div>
+          <div class='rightVerticalColorBar green'>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='tennesseeAveHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot18' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot18' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot18' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot18' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>TENNESSEE AVENUE</h1>
+            <h2 class='leftPropertyContent'>PRICE $180</h2>
+          </div>
+          <div class='leftVerticalColorBar orange'>
+          </div>
+        </td>
+
+        <td colspan='1'></td>
+
+        <td colspan='2'>
+          <h1 class='cardHolder'>CHANCE</h1>
+        </td>
+
+        <td colspan='1'></td>
+
+        <td colspan='4' id='turnDisplayCon'>
+          <div id='turnDisplay'>
+            <p id='testDisplay'></p>
+            <button id='rollButton' class='turnButton'>Roll!</button>
+            <div id='yesNoCon'>
+              <button id='yesButton' class='turnButton' style='display: none'>Yes</button>
+              <button id='noButton' class='turnButton' style='display: none'>No</button>
+            </div>
+            <button id='confirmButton' class='turnButton' style='display: none'>Confirm</button>
+            <button id='onGoConfirmButton' class='turnButton' style='display: none'>Confirm</button>
+            <button id='payRentButton' class='turnButton' style='display: none'>Pay Rent</button>
+            <button id='payUtilityButton' class='turnButton' style='display: none'>Pay Utility</button>
+            <button id='payFlatTaxButton' class='turnButton' style='display: none'></button>
+            <button id='payRateTaxButton' class='turnButton' style='display: none'></button>
+          </div>
+        </td>
+
+        <td colspan='1'></td>
+
+        <td class='horizontal' id='northCarolinaAvenueHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot32' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot32' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot32' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot32' style='display: none'></span>
+          </div>
+          <div class='rightTextCon'>
+            <h1 class='rightPropertyContent' id='nca'>NORTH CAROLINA AVENUE</h1>
+            <h2 class='rightPropertyContent'>PRICE $300</h2>
+          </div>
+          <div class='rightVerticalColorBar green'>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot17' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot17' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot17' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot17' style='display: none'></span>
+          </div>
+          <h1 class='communityChest'>COMMUNITY CHEST</h1>
+        </td>
+
+        <td colspan='9'></td>
+
+        <td class='horizontal'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot33' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot33' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot33' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot33' style='display: none'></span>
+          </div>
+          <h1 class='communityChest'>COMMUNITY CHEST</h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='stJamesPlaceHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot16' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot16' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot16' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot16' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>ST. JAMES PLACE</h1>
+            <h2 class='leftPropertyContent'>PRICE $180</h2>
+          </div>
+          <div class='leftVerticalColorBar orange'>
+          </div>
+        </td>
+
+        <td colspan='9'></td>
+        <td class='horizontal' id='paAveHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot34' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot34' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot34' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot34' style='display: none'></span>
+          </div>
+          <div class='rightTextCon' id='paAveHover'>
+            <h1 class='rightPropertyContent'>PENNSYLV-<br>ANIA AVENUE</h1>
+            <h2 class='rightPropertyContent'>PRICE $300</h2>
+          </div>
+          <div class='rightVerticalColorBar green'>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='paRRHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot15' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot15' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot15' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot15' style='display: none'></span>
+          </div>
+          <h1 class='rr'>PA. RAILROAD</h1>
+          <h2 class='rr'>PRICE $200</h2>
+        </td>
+
+        <td colspan='9'>
+          <h1 class='monopolyCenter'>MONOPOLY</h1>
+        </td>
+
+        <td class='horizontal' id='shortLineRRHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot35' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot35' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot35' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot35' style='display: none'></span>
+          </div>
+          <h1 class='rr'>SHORT LINE RAILROAD</h1>
+          <h2 class='rr'>PRICE $200</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='virginiaAveHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot14' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot14' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot14' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot14' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>VIRGINIA AVENUE</h1>
+            <h2 class='leftPropertyContent'>PRICE $160</h2>
+          </div>
+          <div class='leftVerticalColorBar mediumvioletred'>
+          </div>
+        </td>
+
+        <td colspan='9'></td>
+
+        <td class='horizontal'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot36' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot36' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot36' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot36' style='display: none'></span>
+          </div>
+          <h1 class='chanceRed'>CHANCE</h1>
+          <h2 class='chanceRed'>?</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='statesAveHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot13' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot13' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot13' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot13' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>STATES AVENUE</h1>
+            <h2 class='leftPropertyContent'>PRICE $140</h2>
+          </div>
+          <div class='leftVerticalColorBar mediumvioletred'>
+          </div>
+        </td>
+
+        <td colspan='9'></td>
+
+        <td class='horizontal' id='parkPlaceHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot37' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot37' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot37' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot37' style='display: none'></span>
+          </div>
+          <div class='rightTextCon'>
+            <h1 class='rightPropertyContent' id='parkPlace'>PARK PLACE</h1>
+            <h2 class='rightPropertyContent'>PRICE $350</h2>
+          </div>
+          <div class='rightVerticalColorBar royalblue'>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='electricCompanyHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot12' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot12' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot12' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot12' style='display: none'></span>
+          </div>
+          <h1 class='utility'>ELECTRIC COMPANY<br><i class="far fa-lightbulb"></i></h1>
+          <h2 class='utility'>PRICE $150</h2>
+        </td>
+
+        <td colspan='3'></td>
+
+        <!--HOVER INFO HERE-->
+        <td colspan='3' id='hoverInfoCon'>
+          <div id='hoverInfo' style='display: none'>
+            <div id='infoColorBar'>
+              <h1 id='infoTitle'></h1>
+            </div>
+            <p id='hoverInfoLine1' class='hoverInfo'></p>
+            <p id='hoverInfoLine2' class='hoverInfo'></p>
+            <p id='hoverInfoLine3' class='hoverInfo'></p>
+            <p id='hoverInfoLine4' class='hoverInfo'></p>
+            <p id='hoverInfoLine5' class='hoverInfo'></p>
+            <p id='hoverInfoLine6' class='hoverInfo'></p>
+            <p id='hoverInfoLine7' class='hoverInfo'></p>
+            <p id='hoverInfoLine8' class='hoverInfo'></p>
+            <p id='hoverInfoLine9' class='hoverInfo'></p>
+          </div>
+        </td>
+
+        <td colspan='2'>
+          <h1 class='cardHolder'>COMMUNITY CHEST</h1>
+        </td>
+
+        <td colspan='1'></td>
+
+        <td class='horizontal'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot38' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot38' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot38' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot38' style='display: none'></span>
+          </div>
+          <h1 class='tax'>LUXURY TAX<br>*</h1>
+          <h2 class='tax'>PAY $75</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='horizontal' id='stCharlesPlaceHover'>
+          <div class='leftHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot11' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot11' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot11' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot11' style='display: none'></span>
+          </div>
+          <div class='leftTextCon'>
+            <h1 class='leftPropertyContent'>ST. CHARLES PLACE</h1>
+            <h2 class='leftPropertyContent'>PRICE $140</h2>
+          </div>
+          <div class='leftVerticalColorBar mediumvioletred'>
+          </div>
+        </td>
+
+        <td colspan='9'></td>
+
+        <td class='horizontal' id='boardwalkHover'>
+          <div class='rightHorizontalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot39' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot39' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot39' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot39' style='display: none'></span>
+          </div>
+          <div class='rightTextCon'>
+            <h1 class='rightPropertyContent' id='boardwalk'>BOARDWALK</h1>
+            <h2 class='rightPropertyContent'>PRICE $400</h2>
+          </div>
+          <div class='rightVerticalColorBar royalblue'>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class='corner' id='jailCorner'>
+          <div class='cornerPieceDisplay'>
+            <span class='p1dot dot' id='p1dot10' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot10' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot10' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot10' style='display: none'></span>
+          </div>
+          <h1 id='just'>JUST</h1>
+          <h1 id='visiting'>VISITING</h1>
+          <div class='jail'>
+            <h1 class='jail'>IN JAIL</h1>
+            <div id='jailBars'>
+              <div class='bar'></div>
+              <div class='bar'></div>
+              <div class='bar'></div>
+            </div>
+          </div>
+        </td>
+
+        <td class='vertical' id='connecticutAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot9' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot9' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot9' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot9' style='display: none'></span>
+          </div>
+          <div class='bottomHorizontalColorBar lightBlue'>
+          </div>
+          <h1 class='bottomPropertyContent' id='con'>CONNEC-<br>TICUT AVENUE</h1>
+          <h2 class='bottomPropertyContent'>PRICE $120</h2>
+        </td>
+
+        <td class='vertical' id='vermontAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot8' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot8' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot8' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot8' style='display: none'></span>
+          </div>
+          <div class='bottomHorizontalColorBar lightBlue'>
+          </div>
+          <h1 class='bottomPropertyContent'>VERMONT AVENUE</h1>
+          <h2 class='bottomPropertyContent'>PRICE $100</h2>
+        </td>
+
+        <td class='vertical'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot7' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot7' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot7' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot7' style='display: none'></span>
+          </div>
+          <div class='chance'>
+            <h1 class='chance'>CHANCE</h1>
+            <h2 class='chance' id='chanceViolet'>?</h2>
+          </div>
+        </td>
+
+        <td class='vertical' id='orientalAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot6' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot6' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot6' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot6' style='display: none'></span>
+          </div>
+          <div class='bottomHorizontalColorBar lightBlue'>
+          </div>
+          <h1 class='bottomPropertyContent'>ORIENTAL AVENUE</h1>
+          <h2 class='bottomPropertyContent'>PRICE $100</h2>
+        </td>
+
+        <td class='vertical' id='readingRRHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot5' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot5' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot5' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot5' style='display: none'></span>
+          </div>
+          <h1 class='rr'>READING Railroad</h1>
+          <h2 class='rr'>PRICE $200</h2>
+        </td>
+
+        <td class='vertical'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot4' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot4' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot4' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot4' style='display: none'></span>
+          </div>
+          <div>
+            <h1 class='tax'>INCOME TAX<br>*</h1>
+            <h2 class='tax'>PAY 10% OR $200</h2>
+          </div>
+        </td>
+
+        <td class='vertical' id='balticAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot3' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot3' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot3' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot3' style='display: none'></span>
+          </div>
+          <div class='bottomHorizontalColorBar sienna'>
+          </div>
+          <h1 class='bottomPropertyContent'>BALTIC AVENUE</h1>
+          <h2 class='bottomPropertyContent'>PRICE $60</h2>
+        </td>
+
+        <td class='vertical'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot2' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot2' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot2' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot2' style='display: none'></span>
+          </div>
+          <div>
+            <h1 class='communityChest'>COMMU-<br>NITY CHEST</h1>
+          </div>
+        </td>
+
+        <td class='vertical' id='mediterraneanAveHover'>
+          <div class='verticalPieceDisplay'>
+            <span class='p1dot dot' id='p1dot1' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot1' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot1' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot1' style='display: none'></span>
+          </div>
+          <div class='bottomHorizontalColorBar sienna'>
+          </div>
+          <h1 class='bottomPropertyContent' id='med'>MEDITE-<br>RANEAN AVENUE</h1>
+          <h2 class='bottomPropertyContent'>PRICE $60</h2>
+        </td>
+
+        <td class='corner'>
+          <div class='cornerPieceDisplay'>
+            <span class='p1dot dot' id='p1dot0' style='display: none'></span>
+            <span class='p2dot dot' id='p2dot0' style='display: none'></span>
+            <span class='p3dot dot' id='p3dot0' style='display: none'></span>
+            <span class='p4dot dot' id='p4dot0' style='display: none'></span>
+          </div>
+          <h1 class='go'>COLLECT $200.00 SALARAY AS YOU PASS</h1>
+          <h2 class='go'>GO</h2>
+          <i id='firstArrow' class="goArrow fas fa-long-arrow-alt-left fa-lg"></i>
+          <i class="goArrow fas fa-long-arrow-alt-left fa-lg"></i>
+          <i class="goArrow fas fa-long-arrow-alt-left fa-lg"></i>
+        </td>
+      </tr>
+    </table>
+
+    <div id='playerInfoCon'>
+      <div id='p1DisplayCon' class='info' style='display: none'>
+        <h1 id='p1NameDisplay'></h1>
+        <h2 id='p1MoneyDisplay' class='moneyDisplay'></h2>
+        <h2 id='p1PropertyDisplay'></h2>
+        <h2 id='p1RailroadDisplay'></h2>
+        <h2 id='p1UtilityDisplay'></h2>
+      </div>
+
+      <div id='p2DisplayCon' class='info' style='display: none'>
+        <h1 id='p2NameDisplay'></h1>
+        <h2 id='p2MoneyDisplay' class='moneyDisplay'></h2>
+        <h2 id='p2PropertyDisplay'></h2>
+        <h2 id='p2RailroadDisplay'></h2>
+        <h2 id='p2UtilityDisplay'></h2>
+      </div>
+
+      <div id='p3DisplayCon' class='info' style='display: none'>
+        <h1 id='p3NameDisplay'></h1>
+        <h2 id='p3MoneyDisplay' class='moneyDisplay'></h2>
+        <h2 id='p3PropertyDisplay'></h2>
+        <h2 id='p3RailroadDisplay'></h2>
+        <h2 id='p3UtilityDisplay'></h2>
+      </div>
+
+      <div id='p4DisplayCon' class='info' style='display: none'>
+        <h1 id='p4NameDisplay'></h1>
+        <h2 id='p4MoneyDisplay' class='moneyDisplay'></h2>
+        <h2 id='p4PropertyDisplay'></h2>
+        <h2 id='p4RailroadDisplay'></h2>
+        <h2 id='p4UtilityDisplay'></h2>
+      </div>
+    </div>
+
+  <script src='setup.js'></script>
+  <script src='scripts.js'></script>
+  </body>
+</html>

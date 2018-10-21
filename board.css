@@ -1,0 +1,322 @@
+body {
+  font-family: sans-serif;
+}
+
+p, h1, h2 {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td.corner, td.vertical, td.horizontal {
+  border: 2px solid black;
+  padding: 0;
+}
+
+td.corner {
+  width: 100px;
+  height: 100px;
+}
+
+td.vertical {
+  width: 75px;
+  height: 100px;
+}
+
+td.horizontal {
+  width: 100px;
+  height: 75px;
+}
+
+h1.monopolyCenter {
+  text-align: center;
+  font-size: 60px;
+}
+
+/*Tax, communityChest and utility spaces start*/
+h1.tax, h1.communityChest, h1.utility, h1.rr {
+  text-align: center;
+  font-size: 16px
+}
+
+h2.tax, h2.utility, h2.rr {
+  text-align: center;
+  font-size: 10px;
+}
+/*Tax, communityChest and utility spaces end*/
+
+/*Go space start*/
+h1.go {
+  text-align: center;
+  font-size: 12px;
+}
+
+h2.go {
+  text-align: center;
+  font-size: 30px;
+}
+
+.goArrow {
+  color: red;
+}
+
+#firstArrow {
+  margin-left: 20px;
+}
+/*Go space end*/
+
+/*Jail space start*/
+div.jail {
+  background-color: orange;
+  height: 70px;
+  width: 75px;
+  margin-left: 29px;
+  margin-bottom: 29px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+h1.jail {
+  text-align: center;
+  color: black;
+  font-size: 16px;
+}
+
+#jailBars {
+  margin: auto;
+  border: 2px solid black;
+  height: 45px;
+  width: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.bar {
+  margin-left: 10px;
+  border-right: 2px solid black;
+}
+
+#jailCorner {
+  position: relative;
+}
+
+#just {
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  transform: rotate(90deg);
+  font-size: 16px;
+}
+
+#visiting {
+  margin: 0;
+  position: absolute;
+  bottom: 7px;
+  left: 30px;
+  font-size: 16px;
+}
+/*Jail space end*/
+
+/*Free parking space start*/
+h1.freeParking {
+  text-align: center;
+  color: red;
+  font-size: 22px;
+}
+/*Free parking space end*/
+
+/*Go to jail space start*/
+h1.goToJail {
+  text-align: center;
+  color: royalblue;
+  font-size: 22px
+}
+/*Go to jail space end*/
+
+/*Chance spaces start*/
+h1.chance {
+  text-align: center;
+  font-size: 16px;
+}
+
+h2.chance {
+  text-align: center;
+  font-size: 70px;
+  color: violet;
+}
+
+#chanceViolet {
+  color: mediumvioletred;
+}
+
+#chanceBlue {
+  color: royalblue;
+}
+
+h1.chanceRed {
+  text-align: center;
+  font-size: 16px;
+}
+
+h2.chanceRed {
+  text-align: center;
+  font-size: 45px;
+  color: red;
+}
+/*Chance spaces end*/
+
+/*Top property text content start*/
+h1.topPropertyContent {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: 37px;
+}
+
+h2.topPropertyContent {
+  text-align: center;
+  font-size: 10px;
+}
+/*Top property text content end*/
+
+/*Bottom property text content start*/
+h1.bottomPropertyContent {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 37px;
+}
+
+h2.bottomPropertyContent {
+  text-align: center;
+  font-size: 10px;
+}
+
+#med, #con {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+/*Bottom property text content end*/
+
+/*Left property text content start*/
+h1.leftPropertyContent {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+
+h2.leftPropertyContent {
+  text-align: center;
+  font-size: 10px;
+}
+
+.leftTextCon {
+  margin-top: 3px;
+  float: left;
+  width: 85px;
+}
+/*Left property text content end*/
+
+/*Right property text content start*/
+h1.rightPropertyContent {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+
+h2.rightPropertyContent {
+  text-align: center;
+  font-size: 10px;
+}
+
+.rightTextCon {
+  margin-top: 3px;
+  float: right;
+  width: 85px;
+}
+
+#nca {
+  margin-bottom: 13px;
+}
+
+#parkPlace, #boardwalk {
+  margin-bottom: 42px;
+}
+/*Right property text content end*/
+
+/*Space color start*/
+.bottomHorizontalColorBar {
+  border-bottom: 2px solid black;
+  margin-bottom: 3px;
+  height: 20px;
+}
+
+.topHorizontalColorBar {
+  border-top: 2px solid black;
+  margin-top: 0;
+  height: 20px;
+}
+
+.leftVerticalColorBar {
+  border-left: 2px solid black;
+  margin-left: 84px;
+  width: 20px;
+  height: 75px;
+}
+
+.rightVerticalColorBar {
+  border-right: 2px solid black;
+  margin-right: 84px;
+  width: 20px;
+  height: 75px;
+}
+
+.sienna {
+  background-color: sienna;
+}
+
+.lightBlue {
+  background-color: lightblue;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}
+
+.royalblue {
+  background-color: royalblue;
+}
+
+.mediumvioletred {
+  background-color: mediumvioletred;
+}
+/*Space color end*/
+
+/*Card holders start*/
+.cardHolder {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  height: 71px;
+  width: 135px;
+  font-size: 20px;
+}
+/*Card holders end*/
