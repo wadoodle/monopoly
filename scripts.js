@@ -94,8 +94,8 @@ function turn() {
 
   roll1 = roll();
   roll2 = roll();
-  //total = roll1 + roll2;
-  total = 7;
+  total = roll1 + roll2;
+  //total = 7;
 
   testDisplay.textContent = `${name} rolled a ${roll1} and a ${roll2}, moving ${total} spaces.`;
 
